@@ -7,6 +7,7 @@ const app = express()
 
 // Routelarin daxil edilmesi 
 import productRoutes from "./routes/product.js"
+import userRoutes from "./routes/user.js"
 
 dotenv.config({ path: "config/config.env" })
 connectDatabase()
@@ -14,9 +15,9 @@ connectDatabase()
 app.use(express.json())
 
 app.use("/api/v1",productRoutes)
-
-//  app.get('/')
+app.use("/api/v1",userRoutes)
 
 app.listen(process.env.PORT, () => {
     console.log(` PORT dinlenilir ${process.env.PORT} ve ${process.env.NODE_ENV} `)
 })
+
