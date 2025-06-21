@@ -6,6 +6,8 @@ import ErrorMiddleware from "./middlewares/errors.js"
 import cookieParser from "cookie-parser"
 const app = express()
 
+
+
 // Routelarin daxil edilmesi 
 import productRoutes from "./routes/product.js"
 import userRoutes from "./routes/user.js"
